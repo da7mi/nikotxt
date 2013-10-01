@@ -8,11 +8,53 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="javascripts/jquery.nikoTxt.min.js" language="javascript"></script>
+    <script language="javascript">
+    <!--
+    $(function(){
+        $('demo_btns input').each(function(){
+            switch($(this).val()) {
+                case "simple":
+                    $(this).nikoTxt({txt: "This is Demo!!!"});
+                break;
+                case "duration":
+                    $(this).nikoTxt({
+                         txt: "This is Demo!!!",
+                         duration: 200
+                    });
+                break;
+                case "font set":
+                    $(this).nikoTxt({
+                        txt: "This is Demo!!!",
+                        font: {
+                            size: {
+                                min: 80,
+                                max: 120
+                            },
+                            color: "#FF0000",
+                            colorChange: false
+                        }
+                    });
+                break;
+                case "position":
+                    $(this).nikoTxt({
+                        txt: "This is Demo!!!",
+                        y: {
+                            min: 30,
+                            max: 200
+                        }
+                    });
+                break;
+            }
+        });
+    });
+    //-->
     <title>Nikotxt by da7mi</title>
   </head>
 
@@ -99,6 +141,16 @@
 <ul>
 <li>Ver1.0 / 2013.09.30 / release!!!</li>
 </ul>
+
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<ul id="demo_btns">
+<li><input type="button" value="simple" /></li>
+<li><input type="button" value="duration" /></li>
+<li><input type="button" value="font set" /></li>
+<li><input type="button" value="position" /></li>
+</ul>
+
         </section>
 
         <aside id="sidebar">
