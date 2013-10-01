@@ -18,19 +18,19 @@
     <script language="javascript">
     <!--
     $(function(){
-        $('demo_btns input').each(function(){
+        $('#demo_btns input').each(function(){
             switch($(this).val()) {
                 case "simple":
-                    $(this).nikoTxt({txt: "This is Demo!!!"});
+                    $.nikoTxt({txt: "This is Demo!!!"});
                 break;
                 case "duration":
-                    $(this).nikoTxt({
+                    $.nikoTxt({
                          txt: "This is Demo!!!",
                          duration: 200
                     });
                 break;
                 case "font set":
-                    $(this).nikoTxt({
+                    $.nikoTxt({
                         txt: "This is Demo!!!",
                         font: {
                             size: {
@@ -43,7 +43,7 @@
                     });
                 break;
                 case "position":
-                    $(this).nikoTxt({
+                    $.nikoTxt({
                         txt: "This is Demo!!!",
                         y: {
                             min: 30,
